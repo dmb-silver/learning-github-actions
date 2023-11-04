@@ -16,6 +16,5 @@ runs:
   using: 'composite'
   steps:
   - name: Run command
-    uses: ./job-runner/action.yaml
     run: "echo ssh ${{inputs.system}} ${{ inputs.cmd }}"
     shell: bash
