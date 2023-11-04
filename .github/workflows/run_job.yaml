@@ -14,7 +14,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Run script and command
-      uses: ./ # Uses an action in the root directory
+      uses: .github/workflows
       with:
         system: ${{ inputs.system }}
         environment: ${{ env }}
