@@ -29,7 +29,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Run script and command
-      uses: actions/job-runner@main
+      uses: actions/job-runner@v1
       with:
         system: ${{ inputs.system }}
         environment: ${{ env }}
