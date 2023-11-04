@@ -32,5 +32,5 @@ jobs:
       uses: dmb-silver/learning-github-actions@v1
       with:
         system: ${{ inputs.system }}
-        environment: ${{ env }}
+        environment: ${{ env.MESSAGES }}
         cmd: 'echo "One Command" && echo "Another Command" && echo "Yet Another Command"'
