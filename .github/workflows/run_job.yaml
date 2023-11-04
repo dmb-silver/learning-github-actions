@@ -4,8 +4,14 @@ on:
   workflow_dispatch:
     inputs:
       system:
+        type: string
         description: 'System to run upon'
+        default: elmo
         required: true
+
+env:
+  MESSAGES: /var/log/messages
+  TESTDIR: /opt/test/etc
 
 jobs:
   run-command:
