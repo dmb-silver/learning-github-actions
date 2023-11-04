@@ -8,6 +8,9 @@ on:
         description: 'System to run upon'
         default: elmo
         required: true
+  pull_request:
+    branches:
+      - main
 
 env:
   MESSAGES: /var/log/messages
