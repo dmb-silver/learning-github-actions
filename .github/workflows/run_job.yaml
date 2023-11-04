@@ -32,7 +32,7 @@ jobs:
 #                  arch: amd64
 #                - os: macos-13-large
 #                  arch: arm64    
-    runs-on: macos-13-large  # zero
+    runs-on: [self-hosted, macos, zero]
     steps:
     - name: Checkout
       uses: actions/checkout@v4
