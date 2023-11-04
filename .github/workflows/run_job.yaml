@@ -26,10 +26,10 @@ jobs:
     runs-on: zero
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Run script and command
-      uses: ./
+      uses: actions/job-runner@v1
       with:
         system: ${{ inputs.system }}
         environment: ${{ env }}
