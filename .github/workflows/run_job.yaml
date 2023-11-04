@@ -8,11 +8,12 @@ on:
         required: true
 
 jobs:
-  run_command:
+  run-command:
     runs-on: zero
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+
     - name: Run script and command
       uses: ./.github/workflows
       with:
