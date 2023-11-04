@@ -1,3 +1,12 @@
+
+name: Run Job
+on:
+  workflow_dispatch:
+    inputs:
+      system:
+        description: 'System to run upon'
+        required: true
+
 jobs:
   run_command:
     runs-on: zero
@@ -7,6 +16,6 @@ jobs:
     - name: Run script and command
       uses: ./ # Uses an action in the root directory
       with:
-        system: 'elmo'
+        system: ${{ inputs.system }}
         environment: ${{ env }}
         cmd: 'echo "One Command" && echo "Another Command" && echo "Yet Another Command"'
