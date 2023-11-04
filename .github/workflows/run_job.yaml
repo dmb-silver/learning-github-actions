@@ -23,6 +23,15 @@ env:
 
 jobs:
   run-command:
+
+    strategy:
+        matrix:
+            os: [ubuntu-latest, macos-13-large ]
+            include:
+                - os: ubuntu-latest
+                  arch: amd64
+                - os: macos-13-large
+                  arch: arm64    
     runs-on: zero
     steps:
     - name: Checkout
