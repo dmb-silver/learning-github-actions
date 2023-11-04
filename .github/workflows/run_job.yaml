@@ -1,0 +1,12 @@
+jobs:
+  run_command:
+    runs-on: zero
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Run script and command
+      uses: ./ # Uses an action in the root directory
+      with:
+        system: 'elmo'
+        environment: ${{ env }}
+        cmd: 'echo "One Command" && echo "Another Command" && echo "Yet Another Command"'
