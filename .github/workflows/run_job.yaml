@@ -30,7 +30,7 @@ jobs:
 
     - name: Run script and command
       #uses: dmb-silver/learning-github-actions@v1
-      uses: dmb-silver/learning-github-actions/job-runner@v1
+      uses: dmb-silver/learning-github-actions/job-runner@main
       with:
         system: ${{ inputs.system }}
         environment: ${{ env.MESSAGES }}
